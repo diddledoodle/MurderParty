@@ -25,6 +25,7 @@ public class Item : MonoBehaviour
         private set
         {
             DialogueLua.SetItemField(itemName, nameof(this.Count), value);
+            DialogueManager.SendUpdateTracker();
             Debug.Log($"Collected {itemName}. Count: {Count}");
         }
     }
